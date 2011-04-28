@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glade-interface>
+  <!-- interface-requires gtk+ 2.16 -->
+  <!-- interface-naming-policy project-wide -->
+  <widget class="GtkWindow" id="window">
+    <property name="width_request">480</property>
+    <property name="height_request">272</property>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="extension_events">cursor</property>
+        <child>
+          <widget class="GtkEventBox" id="eventbox1">
+            <property name="visible">True</property>
+            <signal name="button_release_event" handler="on_eventbox1_button_release_event"/>
+            <child>
+              <widget class="GtkImage" id="image3">
+                <property name="visible">True</property>
+                <property name="pixbuf">start.png</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkHBox" id="hbox1">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkEventBox" id="eventbox2">
+                <property name="visible">True</property>
+                <signal name="button_release_event" handler="on_eventbox2_button_release_event"/>
+                <child>
+                  <widget class="GtkImage" id="image1">
+                    <property name="visible">True</property>
+                    <property name="ypad">40</property>
+                    <property name="pixbuf">33-off.png</property>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkEventBox" id="eventbox3">
+                <property name="visible">True</property>
+                <signal name="button_release_event" handler="on_eventbox3_button_release_event"/>
+                <child>
+                  <widget class="GtkImage" id="image2">
+                    <property name="visible">True</property>
+                    <property name="ypad">40</property>
+                    <property name="pixbuf">45-off.png</property>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
