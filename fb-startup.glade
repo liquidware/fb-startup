@@ -12,10 +12,12 @@
         <child>
           <widget class="GtkEventBox" id="eventbox1">
             <property name="visible">True</property>
+            <property name="above_child">True</property>
             <signal name="button_release_event" handler="on_eventbox1_button_release_event"/>
             <child>
               <widget class="GtkImage" id="image3">
                 <property name="visible">True</property>
+                <property name="yalign">1</property>
                 <property name="pixbuf">start.png</property>
               </widget>
             </child>
@@ -34,7 +36,8 @@
                 <child>
                   <widget class="GtkImage" id="image1">
                     <property name="visible">True</property>
-                    <property name="ypad">40</property>
+                    <property name="xalign">0.94999998807907104</property>
+                    <property name="yalign">0</property>
                     <property name="pixbuf">33-off.png</property>
                   </widget>
                 </child>
@@ -50,7 +53,8 @@
                 <child>
                   <widget class="GtkImage" id="image2">
                     <property name="visible">True</property>
-                    <property name="ypad">40</property>
+                    <property name="xalign">0.05000000074505806</property>
+                    <property name="yalign">0</property>
                     <property name="pixbuf">45-off.png</property>
                   </widget>
                 </child>
