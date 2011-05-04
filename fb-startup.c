@@ -64,9 +64,11 @@ void on_eventbox1_button_release_event(GtkWidget      *event_box,
   if (image3_button_state == 0) {
      image3_button_state = 1;
      gtk_image_set_from_file(GTK_IMAGE(image3),(const gchar*)filename_image3_inactive);
+     g_print("Started\n");
   } else {
      image3_button_state = 0;
      gtk_image_set_from_file(GTK_IMAGE(image3),(const gchar*)filename_image3_active);
+     g_print("Stopped\n");
   }
 }
 
@@ -76,6 +78,7 @@ void on_eventbox2_button_release_event(GtkWidget      *event_box,
 {
   if (image2_button_state == 0) {
       SetSpeed(35);
+      g_print("Switched speed to 35\n");
   }
 }
 
@@ -85,8 +88,10 @@ void on_eventbox3_button_release_event(GtkWidget      *event_box,
 {
   if (image1_button_state == 0) {
       SetSpeed(45);
+      g_print("Switched speed to 45\n");
   }
 }
+
 
 /* Get rid of the cursor */
 gboolean program_idler(void) {
