@@ -1,1 +1,9 @@
-README:
+fb-startup is a sample GUI application loaded by Linux on power-up.
+
+Installation
+============
+
+$ make
+$ make install
+
+
