@@ -42,7 +42,7 @@ int Speed = 0;
 
 void SetSpeed(int value)
 {
- if (value == 35) {
+ if (value == 33) {
      image2_button_state = 0;
      gtk_image_set_from_file(GTK_IMAGE(image1),(const gchar*)filename_image1_active);
      image1_button_state = 0;
@@ -77,8 +77,8 @@ void on_eventbox2_button_release_event(GtkWidget      *event_box,
                                        gpointer        data)
 {
   if (image2_button_state == 0) {
-      SetSpeed(35);
-      g_print("Switched speed to 35\n");
+      SetSpeed(33);
+      g_print("Switched speed to 33\n");
   }
 }
 
@@ -102,6 +102,7 @@ gboolean program_idler(void) {
         win = gtk_widget_get_window(window);
         cursor = gdk_cursor_new (GDK_BLANK_CURSOR);
         gdk_window_set_cursor (win, cursor);
+        gtk_image_set_from_file(GTK_IMAGE(image1),(const gchar*)filename_image1_active);
 
         FirstIdleEvent = 0;
     }
