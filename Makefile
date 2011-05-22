@@ -28,5 +28,19 @@ install:
 	cp fb-startup.glade /usr/share/fb-startup/fb-startup.glade
 	cp ./images/*.png /usr/share/fb-startup/
 
+install_audio:
+	opkg install ffmpeg
+	cp ./config/ffserver.conf /etc/
+	cp ./config/asound.state /etc/
+	cp ./config/startx.sh /etc/init.d/
+	alsactl restore
+	- killall ffserver
+	ffserver
+
+	@echo "Your IP:"
+	@echo "`ifconfig | grep inet`"
+	@echo "Usage:"
+	@echo "	ffmpeg -f alsa -ac 2 -ar 44100 -ab 128k -i hw:0,0 http://127.0.0.1:8080/feed1.ffm"
+
 clean:
 	rm -f a.out
