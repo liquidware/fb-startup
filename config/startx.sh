@@ -8,7 +8,7 @@ export DISPLAY=:0.0
 /usr/bin/Xorg -br >/dev/null 2>/dev/null &
 
 #Launch streaming server
-ffserver
+#ffserver
 
 #Launch default X app
 fb-startup &
