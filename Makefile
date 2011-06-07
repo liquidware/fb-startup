@@ -33,6 +33,7 @@ install_audio:
 	cp ./config/ffserver.conf /etc/
 	cp ./config/asound.state /etc/
 	cp ./config/startx.sh /etc/init.d/
+	cp ./config/interfaces /etc/network/
 	alsactl restore
 	- killall ffserver
 	ffserver

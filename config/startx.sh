@@ -13,3 +13,10 @@ export DISPLAY=:0.0
 #Launch default X app
 fb-startup &
 
+#Setup Ethernet
+ifdown usb0
+ifup usb0
+
+#Streaming
+sleep 2
+ffserver
