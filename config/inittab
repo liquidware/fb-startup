@@ -41,3 +41,4 @@ S:2345:respawn:/bin/login -f root </dev/ttyS3 >/dev/ttyS3 2>&1
 #
 
 1:2345:respawn:/sbin/getty 38400 tty1
+
